@@ -121,7 +121,7 @@ body.cursor-hover .cursor {
   font-size: clamp(2.4rem, 5vw, 3.6rem);
   line-height: 1.1;
   color: var(--c-ink);
-  margin-bottom: 15px;
+  margin-bottom: 12px;
 }
 .section-title em {
   font-style: italic;
@@ -562,7 +562,7 @@ body.cursor-hover .cursor {
 .skills { background: var(--c-surface); }
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 24px;
 }
 .skill-card {
