@@ -1,285 +1,358 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Kapilsuriya — Software Engineer</title>
-  <link rel="stylesheet" href="css/style.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kapilsuriya — Software Engineer</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- ░░ CURSOR ░░ -->
+    <div class="cursor" id="cursor"></div>
+    <div class="cursor-dot" id="cursorDot"></div>
 
-  <!-- ░░ CURSOR ░░ -->
-  <div class="cursor" id="cursor"></div>
-  <div class="cursor-dot" id="cursorDot"></div>
+    <!-- ░░ NAV ░░ -->
+    <nav class="nav" id="nav">
+      <a href="#hero" class="nav-logo">Kapilsuriya<span class="dot">.</span></a>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact" class="nav-cta">Let's Talk</a></li>
+      </ul>
+      <button class="nav-toggle" id="navToggle" aria-label="Menu">
+        <span></span><span></span>
+      </button>
+    </nav>
 
-  <!-- ░░ NAV ░░ -->
-  <nav class="nav" id="nav">
-    <a href="#hero" class="nav-logo">Kapilsuriya K<span class="dot"></span></a>
-    <ul class="nav-links">
-      <li><a href="#about">About</a></li>
-      <li><a href="#experience">Experience</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#contact" class="nav-cta">Let's Talk</a></li>
-    </ul>
-    <button class="nav-toggle" id="navToggle" aria-label="Menu">
-      <span></span><span></span>
-    </button>
-  </nav>
-
-  <!-- ░░ MOBILE MENU ░░ -->
-  <div class="mobile-menu" id="mobileMenu">
-    <ul>
-      <li><a href="#about" class="mobile-link">About</a></li>
-      <li><a href="#experience" class="mobile-link">Experience</a></li>
-      <li><a href="#skills" class="mobile-link">Skills</a></li>
-      <li><a href="#projects" class="mobile-link">Projects</a></li>
-      <li><a href="#testimonials" class="mobile-link">Testimonials</a></li>
-      <li><a href="#contact" class="mobile-link">Contact</a></li>
-    </ul>
-  </div>
-
-  <!-- ░░ HERO ░░ -->
-  <section class="hero" id="hero">
-    <div class="hero-bg">
-      <div class="orb orb-1"></div>
-      <div class="orb orb-2"></div>
-      <div class="grid-overlay"></div>
+    <!-- ░░ MOBILE MENU ░░ -->
+    <div class="mobile-menu" id="mobileMenu">
+      <ul>
+        <li><a href="#about" class="mobile-link">About</a></li>
+        <li><a href="#experience" class="mobile-link">Experience</a></li>
+        <li><a href="#skills" class="mobile-link">Skills</a></li>
+        <li><a href="#projects" class="mobile-link">Projects</a></li>
+        <li><a href="#testimonials" class="mobile-link">Testimonials</a></li>
+        <li><a href="#contact" class="mobile-link">Contact</a></li>
+      </ul>
     </div>
-    <div class="hero-content">
-      <p class="hero-eyebrow reveal">Software Engineer</p>
-      <h1 class="hero-title reveal">
-        Developing modern<br /><em>software solutions</em>
-      </h1>
-      <p class="hero-sub reveal">
-Fresher developer focused on creating clean, modern, and impactful applications.      <div class="hero-actions reveal">
-        <a href="#projects" class="btn btn-primary">View Work</a>
-        <a href="#contact" class="btn btn-ghost">Get in Touch</a>
+
+    <!-- ░░ HERO ░░ -->
+    <section class="hero" id="hero">
+      <div class="hero-bg">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="grid-overlay"></div>
       </div>
-    </div>
-  </section>
+      <div class="hero-content">
+        <p class="hero-eyebrow reveal">Software Engineer</p>
+        <h1 class="hero-title reveal">
+          Developing modern<br /><em>software solutions</em>
+        </h1>
+        <p class="hero-sub reveal">
+          Fresher developer focused on creating clean, modern, and impactful
+          applications.
+        </p>
+        <div class="hero-actions reveal">
+          <a href="#projects" class="btn btn-primary">View Work</a>
+          <a href="#contact" class="btn btn-ghost">Get in Touch</a>
+        </div>
+      </div>
+    </section>
 
-  <!-- ░░ ABOUT ░░ -->
-  <section class="about section" id="about">
-    <div class="container">
-      <div class="about-grid">
-        <div class="about-image-wrap reveal">
-          <div class="about-image-frame">
-            <img src="assets/potrait.jpeg" alt="Alex Mercer" class="about-image" />
-          </div>
-          <!-- <div class="about-badge">
+    <!-- ░░ ABOUT ░░ -->
+    <section class="about section" id="about">
+      <div class="container">
+        <div class="about-grid">
+          <div class="about-image-wrap reveal">
+            <div class="about-image-frame">
+              <img
+                src="assets/potrait.jpeg"
+                alt="Alex Mercer"
+                class="about-image"
+              />
+            </div>
+            <!-- <div class="about-badge">
             <span class="badge-number">5+</span>
             <span class="badge-label">Years of<br/>Experience</span>
           </div> -->
-        </div>
-        <div class="about-text">
-          <p class="section-label reveal">About Me</p>
-          <h2 class="section-title reveal">Building things<br/>that <em>matter</em></h2>
-          <p class="about-body reveal">
-            I’m a passionate fresher developer and computer science student focused on building modern, scalable, and user-friendly applications. I enjoy turning ideas into real-world digital products through clean code, thoughtful design, and continuous learning.
-          </p>
-          <p class="about-body reveal">
-            I’m focused on building modern, scalable, and user-friendly applications. I enjoy turning ideas into real-world digital products through clean code, thoughtful design, and continuous learning.
-          </p>
-          <p class="about-body reveal">
-            Beyond coding, I actively explore new technologies, work on personal projects, and stay curious about the future of AI, SaaS, and web innovation. I believe consistent learning and hands-on building are the fastest ways to grow as an engineer.
-          </p>
-          <div class="about-stats reveal">
-            <div class="stat">
-              <span class="stat-n">4+</span>
-              <span class="stat-l">Projects Shipped</span>
-            </div>
-            <div class="stat">
-              <span class="stat-n">20+</span>
-              <span class="stat-l">Open Source Repos</span>
-            </div>
           </div>
-          <a href="/public/Kapilsuriya-RESUME (2).pdf" class="btn btn-outline reveal">Download Resume</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ░░ EXPERIENCE ░░ -->
-  <section class="experience section" id="experience">
-    <div class="container">
-      <p class="section-label reveal">Career</p>
-      <h2 class="section-title reveal">Work Experience</h2>
-      <div class="timeline">
-
-        <div class="timeline-item reveal">
-          <div class="timeline-meta">
-            <span class="timeline-date">2026 — Feb to Mar</span>
-            <span class="timeline-tag">Internship</span>
-          </div>
-          <div class="timeline-body">
-            <h3 class="timeline-role">App Developer</h3>
-            <p class="timeline-company">M7 Corporation Pvt Ltd <span>— Chennai</span></p>
-            <p class="timeline-desc">
-                Developing mobile applications using Flutter and Dart, focusing on responsive and user-friendly UI,
-and implementing features such as camera integration, file handling, and permission management.
-                Using Git and GitHub for version control, following clean commit practices and collaborating
-efficiently in team-based development projects.
+          <div class="about-text">
+            <p class="section-label reveal">About Me</p>
+            <h2 class="section-title reveal">
+              Building things<br />that <em>matter</em>
+            </h2>
+            <p class="about-body reveal">
+              I’m a passionate fresher developer and computer science student
+              focused on building modern, scalable, and user-friendly
+              applications. I enjoy turning ideas into real-world digital
+              products through clean code, thoughtful design, and continuous
+              learning.
             </p>
-            <div class="timeline-tags">
-              <span>Flutter</span><span>Dart</span><span>API</span><span>Git</span><span>Postman</span>
+            <p class="about-body reveal">
+              I’m focused on building modern, scalable, and user-friendly
+              applications. I enjoy turning ideas into real-world digital
+              products through clean code, thoughtful design, and continuous
+              learning.
+            </p>
+            <p class="about-body reveal">
+              Beyond coding, I actively explore new technologies, work on
+              personal projects, and stay curious about the future of AI, SaaS,
+              and web innovation. I believe consistent learning and hands-on
+              building are the fastest ways to grow as an engineer.
+            </p>
+            <div class="about-stats reveal">
+              <div class="stat">
+                <span class="stat-n">4+</span>
+                <span class="stat-l">Projects</span>
+              </div>
+              <div class="stat">
+                <span class="stat-n">20+</span>
+                <span class="stat-l">Open Source Repos</span>
+              </div>
+            </div>
+            <a
+              href="/public/Kapilsuriya-RESUME (2).pdf"
+              class="btn btn-outline reveal"
+              >Download Resume</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ░░ EXPERIENCE ░░ -->
+    <section class="experience section" id="experience">
+      <div class="container">
+        <p class="section-label reveal">Career</p>
+        <h2 class="section-title reveal">Work Experience</h2>
+        <div class="timeline">
+          <div class="timeline-item reveal">
+            <div class="timeline-meta">
+              <span class="timeline-date">2026 — Feb to Mar</span>
+              <span class="timeline-tag">Internship</span>
+            </div>
+            <div class="timeline-body">
+              <h3 class="timeline-role">App Developer</h3>
+              <p class="timeline-company">
+                M7 Corporation Pvt Ltd <span>— Chennai</span>
+              </p>
+              <p class="timeline-desc">
+                Developing mobile applications using Flutter and Dart, focusing
+                on responsive and user-friendly UI, and implementing features
+                such as camera integration, file handling, and permission
+                management. Using Git and GitHub for version control, following
+                clean commit practices and collaborating efficiently in
+                team-based development projects.
+              </p>
+              <div class="timeline-tags">
+                <span>Flutter</span><span>Dart</span><span>API</span
+                ><span>Git</span><span>Postman</span>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ░░ SKILLS ░░ -->
-  <section class="skills section" id="skills">
-    <div class="container">
-      <p class="section-label reveal">Expertise</p>
-      <h2 class="section-title reveal">Technical Skills</h2>
-      <div class="skills-grid">
+    <!-- ░░ SKILLS ░░ -->
+    <section class="skills section" id="skills">
+      <div class="container">
+        <p class="section-label reveal">Expertise</p>
+        <h2 class="section-title reveal">Technical Skills</h2>
+        <div class="skills-grid">
+          <div class="skill-card reveal">
+            <div class="skill-icon">◇</div>
+            <h3>Languages</h3>
+            <ul>
+              <li>Java</li>
+              <li>JavaScript</li>
+            </ul>
+          </div>
 
-        <div class="skill-card reveal">
-          <div class="skill-icon">◇</div>
-          <h3>Languages</h3>
-          <ul>
-            <li>Java</li>
-            <li>JavaScript</li>
-          </ul>
+          <div class="skill-card reveal">
+            <div class="skill-icon">⬡</div>
+            <h3>Frontend</h3>
+            <ul>
+              <li>HTML / CSS</li>
+              <li>React Js</li>
+              <li>Flutter</li>
+              <li>Tailwind CSS</li>
+            </ul>
+          </div>
+
+          <div class="skill-card reveal">
+            <div class="skill-icon">◈</div>
+            <h3>backend</h3>
+            <ul>
+              <li>Node Js</li>
+              <li>REST APIs</li>
+              <li>Web Socket</li>
+            </ul>
+          </div>
+
+          <div class="skill-card reveal">
+            <div class="skill-icon">◎</div>
+            <h3>DataBase & Cloud</h3>
+            <ul>
+              <li>MySQL</li>
+              <li>MongoDB Atlas</li>
+              <li>AWS (Learning)</li>
+            </ul>
+          </div>
+
+          <div class="skill-card reveal">
+            <div class="skill-icon">◇</div>
+            <h3>Tools</h3>
+            <ul>
+              <li>Git</li>
+              <li>GitHub</li>
+              <li>VS Code</li>
+              <li>Postman</li>
+            </ul>
+          </div>
+
+          <div class="skill-card reveal">
+            <div class="skill-icon">◇</div>
+            <h3>Core CS</h3>
+            <ul>
+              <li>DBMS</li>
+              <li>Operating Systems</li>
+              <li>Computer Networks</li>
+              <li>Object-Oriented Programming</li>
+              <li>SDLC</li>
+            </ul>
+          </div>
         </div>
-
-        <div class="skill-card reveal">
-          <div class="skill-icon">⬡</div>
-          <h3>Frontend</h3>
-          <ul>
-            <li>HTML / CSS</li>
-            <li>React Js</li>
-            <li>Flutter</li>
-            <li>Tailwind CSS</li>
-          </ul>
-        </div>
-
-        <div class="skill-card reveal">
-          <div class="skill-icon">◈</div>
-          <h3>backend</h3>
-          <ul>
-            <li>Node Js</li>
-            <li>REST APIs</li>
-            <li>Web Socket</li>
-          </ul>
-        </div>
-
-        <div class="skill-card reveal">
-          <div class="skill-icon">◎</div>
-          <h3>DataBase & Cloud</h3>
-          <ul>
-            <li>MySQL</li>
-            <li>MongoDB Atlas</li>
-            <li>AWS (Learning)</li>
-          </ul>
-        </div>
-
-        <div class="skill-card reveal">
-          <div class="skill-icon">◇</div>
-          <h3>Tools</h3>
-          <ul>
-            <li>Git</li>
-            <li>GitHub</li>
-            <li>VS Code</li>
-            <li>Postman</li>
-          </ul>
-        </div>
-
-        <div class="skill-card reveal">
-          <div class="skill-icon">◇</div>
-          <h3>Core CS</h3>
-          <ul>
-            <li>DBMS</li>
-            <li>Operating Systems</li>
-            <li>Computer Networks</li>
-            <li>Object-Oriented Programming</li>
-            <li>SDLC</li>
-          </ul>
-        </div>
-
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ░░ PROJECTS ░░ -->
-  <section class="projects section" id="projects">
-    <div class="container">
-      <p class="section-label reveal">Work</p>
-      <h2 class="section-title reveal">Selected Projects</h2>
-      <div class="projects-grid">
-
-        <article class="project-card project-card--featured reveal">
-          <div class="project-img-wrap">
-            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80" alt="DataFlow" class="project-img" />
-            <div class="project-overlay">
-              <a href="#" class="project-link">View Project ↗</a>
+    <!-- ░░ PROJECTS ░░ -->
+    <section class="projects section" id="projects">
+      <div class="container">
+        <p class="section-label reveal">Work</p>
+        <h2 class="section-title reveal">Selected Projects</h2>
+        <div class="projects-grid">
+          <article class="project-card project-card--featured reveal">
+            <div class="project-img-wrap">
+              <img
+                src="/assets/ChatGPT Image May 15, 2026, 11_06_02 AM.png"
+                alt="Debt Management System"
+                class="project-img"
+              />
+              <div class="project-overlay">
+                <a href="project-debt-management.html" class="project-link"
+                  >View Project ↗</a
+                >
+              </div>
             </div>
-          </div>
-          <div class="project-info">
-            <span class="project-year">2026</span>
-            <h3 class="project-title">Debt Management App</h3>
-            <p class="project-desc">Built an application to manage customer credits, transactions, and outstanding balances for my dad
-retail shop.</p>
-            <div class="project-tech"><span>Flutter</span><span>Node Js</span><span>MongoDB</span><span>HTML</span></div>
-          </div>
-        </article>
-
-        <article class="project-card reveal">
-          <div class="project-img-wrap">
-            <img src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=600&q=80" alt="VaultPay" class="project-img" />
-            <div class="project-overlay">
-              <a href="#" class="project-link">View Project ↗</a>
+            <div class="project-info">
+              <span class="project-year">2026</span>
+              <h3 class="project-title">Debt Management System</h3>
+              <p class="project-desc">
+                Mobile application for managing customer debts,
+                credits, outstanding balances, and payment tracking with secure
+                JWT authentication, AES-256 encrypted storage, and real-time
+                cloud synchronization.
+              </p>
+              <div class="project-tech">
+                <span>Flutter</span>
+                <span>Node.js</span>
+                <span>MongoDB</span>
+                <span>Riverpod</span>
+              </div>
             </div>
-          </div>
-          <div class="project-info">
-            <span class="project-year">2023</span>
-            <h3 class="project-title">VaultPay</h3>
-            <p class="project-desc">Secure payment SDK for fintech startups. PCI-DSS compliant, supports 15+ payment methods.</p>
-            <div class="project-tech"><span>Python</span><span>Stripe</span><span>AWS</span></div>
-          </div>
-        </article>
+          </article>
 
-        <article class="project-card reveal">
-          <div class="project-img-wrap">
-            <img src="https://images.unsplash.com/photo-1555774698-0b77e0d5fac6?w=600&q=80" alt="Synapse" class="project-img" />
-            <div class="project-overlay">
-              <a href="#" class="project-link">View Project ↗</a>
+          <article class="project-card reveal">
+            <div class="project-img-wrap">
+              <img
+                src="/assets/ChatGPT Image May 15, 2026, 11_06_02 AM.png"
+                alt="VaultPay"
+                class="project-img"
+              />
+              <div class="project-overlay">
+                <a href="project-vaultpay.html" class="project-link"
+                  >View Project ↗</a
+                >
+              </div>
             </div>
-          </div>
-          <div class="project-info">
-            <span class="project-year">2023</span>
-            <h3 class="project-title">Synapse</h3>
-            <p class="project-desc">Developer collaboration tool with AI-assisted code review, integrated into GitHub Actions.</p>
-            <div class="project-tech"><span>TypeScript</span><span>Next.js</span><span>OpenAI</span></div>
-          </div>
-        </article>
-
-        <article class="project-card reveal">
-          <div class="project-img-wrap">
-            <img src="https://images.unsplash.com/photo-1518432031352-d6fc5c10da5a?w=600&q=80" alt="Orbit" class="project-img" />
-            <div class="project-overlay">
-              <a href="#" class="project-link">View Project ↗</a>
+            <div class="project-info">
+              <span class="project-year">2023</span>
+              <h3 class="project-title">VaultPay</h3>
+              <p class="project-desc">
+                Secure payment SDK for fintech startups. PCI-DSS compliant,
+                supports 15+ payment methods.
+              </p>
+              <div class="project-tech">
+                <span>Python</span><span>Stripe</span><span>AWS</span>
+              </div>
             </div>
-          </div>
-          <div class="project-info">
-            <span class="project-year">2022</span>
-            <h3 class="project-title">Orbit OS</h3>
-            <p class="project-desc">Open-source distributed task scheduler with 1.2k GitHub stars and 80+ contributors.</p>
-            <div class="project-tech"><span>Go</span><span>etcd</span><span>gRPC</span></div>
-          </div>
-        </article>
+          </article>
 
+          <article class="project-card reveal">
+            <div class="project-img-wrap">
+              <img
+                src="https://images.unsplash.com/photo-1555774698-0b77e0d5fac6?w=600&q=80"
+                alt="Synapse"
+                class="project-img"
+              />
+              <div class="project-overlay">
+                <a href="project-synapse.html" class="project-link"
+                  >View Project ↗</a
+                >
+              </div>
+            </div>
+            <div class="project-info">
+              <span class="project-year">2023</span>
+              <h3 class="project-title">Synapse</h3>
+              <p class="project-desc">
+                Developer collaboration tool with AI-assisted code review,
+                integrated into GitHub Actions.
+              </p>
+              <div class="project-tech">
+                <span>TypeScript</span><span>Next.js</span><span>OpenAI</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="project-img-wrap">
+              <img
+                src="https://images.unsplash.com/photo-1518432031352-d6fc5c10da5a?w=600&q=80"
+                alt="Orbit"
+                class="project-img"
+              />
+              <div class="project-overlay">
+                <a href="project-orbit.html" class="project-link"
+                  >View Project ↗</a
+                >
+              </div>
+            </div>
+            <div class="project-info">
+              <span class="project-year">2022</span>
+              <h3 class="project-title">Orbit OS</h3>
+              <p class="project-desc">
+                Open-source distributed task scheduler with 1.2k GitHub stars
+                and 80+ contributors.
+              </p>
+              <div class="project-tech">
+                <span>Go</span><span>etcd</span><span>gRPC</span>
+              </div>
+            </div>
+          </article>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ░░ TESTIMONIALS ░░
+    <!-- ░░ TESTIMONIALS ░░
   <section class="testimonials section" id="testimonials">
     <div class="container">
       <p class="section-label reveal">Kind Words</p>
@@ -323,31 +396,40 @@ retail shop.</p>
     </div>
   </section> -->
 
-  <!-- ░░ CONTACT ░░ -->
-  <section class="contact section" id="contact">
-    <div class="container">
-      <div class="contact-inner">
-        <p class="section-label reveal">Get in Touch</p>
-        <h2 class="contact-title reveal">Let's build something<br /><em>great together</em></h2>
-        <p class="contact-sub reveal">Open to senior engineering roles, fractional CTO engagements, and interesting side projects.</p>
-        <a href="mailto:alex@example.com" class="contact-email reveal">suriya23k@gmail.com</a>
-        <div class="contact-links reveal">
-          <a href="https://github.com/kapilsuriya23" class="social-link">GitHub</a>
-          <a href="#" class="social-link">LinkedIn</a>
-          <a href="#" class="social-link">Twitter</a>
-          <a href="#" class="social-link">Resume</a>
+    <!-- ░░ CONTACT ░░ -->
+    <section class="contact section" id="contact">
+      <div class="container">
+        <div class="contact-inner">
+          <p class="section-label reveal">Get in Touch</p>
+          <h2 class="contact-title reveal">
+            Let's build something<br /><em>great together</em>
+          </h2>
+          <p class="contact-sub reveal">
+            Open to senior engineering roles, fractional CTO engagements, and
+            interesting side projects.
+          </p>
+          <a href="mailto:alex@example.com" class="contact-email reveal"
+            >suriya23k@gmail.com</a
+          >
+          <div class="contact-links reveal">
+            <a href="https://github.com/kapilsuriya23" class="social-link"
+              >GitHub</a
+            >
+            <a href="#" class="social-link">LinkedIn</a>
+            <a href="#" class="social-link">Twitter</a>
+            <a href="#" class="social-link">Resume</a>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ░░ FOOTER ░░ -->
-  <footer class="footer">
-    <div class="container">
-      <span>© 2026 Kapilsuriya</span>
-    </div>
-  </footer>
+    <!-- ░░ FOOTER ░░ -->
+    <footer class="footer">
+      <div class="container">
+        <span>© 2026 Kapilsuriya</span>
+      </div>
+    </footer>
 
-  <script src="js/main.js"></script>
-</body>
+    <script src="js/main.js"></script>
+  </body>
 </html>

@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Debt Management System — Kapilsuriya</title>
+
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/project.css" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap"
+    rel="stylesheet"
+  />
+</head>
+
+<body>
+
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-dot" id="cursorDot"></div>
+
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <a href="index.html" class="nav-logo">Kapilsuriya<span class="dot">.</span></a>
+
+    <ul class="nav-links">
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="index.html#experience">Experience</a></li>
+      <li><a href="index.html#skills">Skills</a></li>
+      <li><a href="index.html#projects">Projects</a></li>
+      <li><a href="index.html#contact" class="nav-cta">Let's Talk</a></li>
+    </ul>
+
+    <button class="nav-toggle" id="navToggle" aria-label="Menu">
+      <span></span>
+      <span></span>
+    </button>
+  </nav>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobileMenu">
+    <ul>
+      <li><a href="index.html#about" class="mobile-link">About</a></li>
+      <li><a href="index.html#experience" class="mobile-link">Experience</a></li>
+      <li><a href="index.html#skills" class="mobile-link">Skills</a></li>
+      <li><a href="index.html#projects" class="mobile-link">Projects</a></li>
+      <li><a href="index.html#contact" class="mobile-link">Contact</a></li>
+    </ul>
+  </div>
+
+  <!-- HERO -->
+  <section class="pj-hero">
+
+    <div class="pj-hero-bg">
+      <div class="orb orb-1"></div>
+      <div class="orb orb-2"></div>
+      <div class="grid-overlay"></div>
+    </div>
+
+    <div class="container pj-hero-inner">
+
+      <a href="index.html#projects" class="pj-back reveal">
+        ← Back to Projects
+      </a>
+
+      <div class="pj-hero-meta reveal">
+        <span class="pj-year">2026</span>
+        <span class="pj-category">Business Management Application</span>
+      </div>
+
+      <h1 class="pj-title reveal">
+        Debt Management <em>System</em>
+      </h1>
+
+      <p class="pj-tagline reveal">
+        Full-stack mobile application for managing customer debts,
+        credits, and outstanding balances with secure real-time cloud sync.
+      </p>
+
+      <div class="pj-hero-stats reveal">
+
+        <div class="pj-stat">
+          <span class="pj-stat-n">JWT</span>
+          <span class="pj-stat-l">Secure Authentication</span>
+        </div>
+
+        <div class="pj-stat">
+          <span class="pj-stat-n">AES-256</span>
+          <span class="pj-stat-l">Encrypted Local Storage</span>
+        </div>
+
+        <div class="pj-stat">
+          <span class="pj-stat-n">Real-time</span>
+          <span class="pj-stat-l">Cloud Sync</span>
+        </div>
+
+        <div class="pj-stat">
+          <span class="pj-stat-n">Full-Stack</span>
+          <span class="pj-stat-l">Mobile + Backend</span>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="pj-hero-img-wrap reveal">
+      <img
+        src="/assets/ui poster.png"
+        alt="Debt Management dashboard"
+        class="pj-hero-img"
+      />
+    </div>
+
+  </section>
+
+  <!-- MAIN -->
+  <main class="pj-main">
+
+    <div class="container pj-layout">
+
+      <!-- SIDEBAR -->
+      <aside class="pj-sidebar">
+
+        <div class="pj-sidebar-card reveal">
+
+          <h4>Tech Stack</h4>
+
+          <ul class="pj-tech-list">
+            <li><span class="pj-tech-dot"></span>Flutter</li>
+            <li><span class="pj-tech-dot"></span>Riverpod</li>
+            <li><span class="pj-tech-dot"></span>Node.js</li>
+            <li><span class="pj-tech-dot"></span>Express.js</li>
+            <li><span class="pj-tech-dot"></span>MongoDB Atlas</li>
+            <li><span class="pj-tech-dot"></span>REST API</li>
+            <li><span class="pj-tech-dot"></span>JWT Auth</li>
+            <li><span class="pj-tech-dot"></span>Render</li>
+          </ul>
+
+        </div>
+
+        <div class="pj-sidebar-card reveal">
+
+          <h4>My Role</h4>
+
+          <p>
+            Full-Stack Developer — designed and developed the mobile
+            application, REST API backend, authentication system,
+            database architecture, and production deployment.
+          </p>
+
+        </div>
+
+        <div class="pj-sidebar-card reveal">
+
+          <h4>Links</h4>
+
+          <a href="#" class="pj-ext-link">↗ Live Demo</a>
+          <a href="https://github.com/kapilsuriya23/dept_manager.git" class="pj-ext-link">↗ GitHub Repo</a>
+
+        </div>
+
+      </aside>
+
+      <!-- CONTENT -->
+      <article class="pj-content">
+
+        <!-- OVERVIEW -->
+        <section class="pj-section reveal">
+
+          <h2>Overview</h2>
+
+          <p>
+            Debt Management System is a production-style mobile
+            application built for retail shop owners to manage customer
+            debts, credits, and outstanding balances efficiently across
+            multiple devices.
+          </p>
+
+          <p>
+            The application provides secure account-based access where
+            each shop owner can manage only their own customer records.
+            It supports real-time cloud synchronization using a Node.js
+            REST API and MongoDB Atlas while maintaining encrypted local
+            storage for improved security and offline persistence.
+          </p>
+
+        </section>
+
+        <!-- PROBLEM -->
+        <section class="pj-section reveal">
+
+          <h2>The Problem</h2>
+
+          <div class="pj-callout pj-callout--problem">
+
+            <p>
+              "Managing customer debts manually in notebooks caused
+              calculation errors, missing payments, and difficulty
+              tracking balances."
+            </p>
+
+            <cite>— Retail Shop Requirement</cite>
+
+          </div>
+
+          <p>
+            Traditional debt tracking methods used by small businesses
+            lacked security, searchability, automatic calculations, and
+            reliable backup systems. Shop owners often struggled to
+            track credits, debt settlements, and remaining balances
+            accurately.
+          </p>
+
+        </section>
+
+        <!-- ARCHITECTURE -->
+        <section class="pj-section reveal">
+
+          <h2>Architecture</h2>
+
+          <p>
+            The application follows a modern client-server architecture
+            with Flutter as the mobile frontend and a REST API backend
+            built using Node.js and Express.js.
+          </p>
+
+          <div class="pj-arch-diagram">
+
+            <div class="pj-arch-row">
+
+              <div class="pj-arch-node pj-arch-node--source">
+                Flutter App
+                <small>Mobile UI · Riverpod State</small>
+              </div>
+
+              <div class="pj-arch-arrow">→</div>
+
+              <div class="pj-arch-node pj-arch-node--stream">
+                REST API
+                <small>Node.js · Express.js</small>
+              </div>
+
+              <div class="pj-arch-arrow">→</div>
+
+              <div class="pj-arch-node pj-arch-node--process">
+                MongoDB Atlas
+                <small>Cloud Database</small>
+              </div>
+
+            </div>
+
+            <div class="pj-arch-row pj-arch-row--2">
+
+              <div class="pj-arch-node pj-arch-node--store">
+                AES-256 Storage
+                <small>Encrypted Local Cache</small>
+              </div>
+
+              <div class="pj-arch-arrow pj-arch-arrow--up">↑</div>
+
+              <div class="pj-arch-node pj-arch-node--cache">
+                JWT Authentication
+                <small>Secure Access Tokens</small>
+              </div>
+
+              <div class="pj-arch-arrow">→</div>
+
+              <div class="pj-arch-node pj-arch-node--ui">
+                Dashboard UI
+                <small>Search · Analytics · Balances</small>
+              </div>
+
+            </div>
+
+          </div>
+
+          <p>
+            The backend provides secure APIs for customer management,
+            debt entries, credit tracking, balance calculation, and
+            real-time synchronization between devices.
+          </p>
+
+        </section>
+
+        <!-- ENGINEERING -->
+        <section class="pj-section reveal">
+
+          <h2>Key Engineering Decisions</h2>
+
+          <div class="pj-decisions">
+
+            <div class="pj-decision">
+
+              <span class="pj-decision-num">01</span>
+
+              <div>
+
+                <h4>Riverpod for scalable state management</h4>
+
+                <p>
+                  Riverpod provided predictable state handling,
+                  improved code organization, and simplified reactive UI
+                  updates across the application.
+                </p>
+
+              </div>
+
+            </div>
+
+            <div class="pj-decision">
+
+              <span class="pj-decision-num">02</span>
+
+              <div>
+
+                <h4>JWT-based authentication</h4>
+
+                <p>
+                  Implemented secure token-based authentication with
+                  account isolation so each user can access only their
+                  own customer and transaction records.
+                </p>
+
+              </div>
+
+            </div>
+
+            <div class="pj-decision">
+
+              <span class="pj-decision-num">03</span>
+
+              <div>
+
+                <h4>AES-256 encrypted local storage</h4>
+
+                <p>
+                  Sensitive user data and cached records are encrypted
+                  locally to improve security and protect business
+                  information.
+                </p>
+
+              </div>
+
+            </div>
+
+            <div class="pj-decision">
+
+              <span class="pj-decision-num">04</span>
+
+              <div>
+
+                <h4>Automatic balance calculation system</h4>
+
+                <p>
+                  The system dynamically calculates outstanding balances
+                  by subtracting credits from total debts, reducing
+                  manual calculation errors.
+                </p>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </section>
+
+        <!-- RESULTS -->
+        <section class="pj-section reveal">
+
+          <h2>Results</h2>
+
+          <div class="pj-results-grid">
+
+            <div class="pj-result-card">
+              <span class="pj-result-n">100%</span>
+              <span class="pj-result-l">
+                Cloud-based data synchronization
+              </span>
+            </div>
+
+            <div class="pj-result-card">
+              <span class="pj-result-n">Secure</span>
+              <span class="pj-result-l">
+                JWT authentication with encrypted storage
+              </span>
+            </div>
+
+            <div class="pj-result-card">
+              <span class="pj-result-n">Real-time</span>
+              <span class="pj-result-l">
+                Customer balance updates
+              </span>
+            </div>
+
+            <div class="pj-result-card">
+              <span class="pj-result-n">Production</span>
+              <span class="pj-result-l">
+                Backend deployed on Render + MongoDB Atlas
+              </span>
+            </div>
+
+          </div>
+
+        </section>
+
+        <!-- LESSONS -->
+        <section class="pj-section reveal">
+
+          <h2>Lessons Learned</h2>
+
+          <p>
+            Building this project strengthened my understanding of
+            full-stack mobile application architecture,
+            authentication systems, API development, and cloud database
+            deployment.
+          </p>
+
+          <p>
+            One major learning was designing secure multi-user data
+            isolation to ensure that each account could only access its
+            own records. I also gained practical experience handling
+            encrypted local storage, REST API integration, and
+            production deployment challenges on free-tier cloud
+            infrastructure.
+          </p>
+
+        </section>
+
+      </article>
+
+    </div>
+
+    <!-- PROJECT NAV -->
+    <div class="pj-nav-strip">
+
+      <div class="container pj-nav-inner">
+
+        <a href="index.html#projects" class="pj-nav-all">
+          ← All Projects
+        </a>
+
+        
+
+      </div>
+
+    </div>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+
+    <div class="container">
+      <span>© 2026 Kapilsuriya</span>
+    </div>
+
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/project.js"></script>
+
+</body>
+</html>

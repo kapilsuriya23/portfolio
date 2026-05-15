@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Synapse — Alex Mercer</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/project.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-dot" id="cursorDot"></div>
+
+  <nav class="nav" id="nav">
+    <a href="index.html" class="nav-logo">AM<span class="dot">.</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="index.html#experience">Experience</a></li>
+      <li><a href="index.html#skills">Skills</a></li>
+      <li><a href="index.html#projects">Projects</a></li>
+      <li><a href="index.html#contact" class="nav-cta">Let's Talk</a></li>
+    </ul>
+    <button class="nav-toggle" id="navToggle" aria-label="Menu">
+      <span></span><span></span>
+    </button>
+  </nav>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <ul>
+      <li><a href="index.html#about"      class="mobile-link">About</a></li>
+      <li><a href="index.html#experience" class="mobile-link">Experience</a></li>
+      <li><a href="index.html#skills"     class="mobile-link">Skills</a></li>
+      <li><a href="index.html#projects"   class="mobile-link">Projects</a></li>
+      <li><a href="index.html#contact"    class="mobile-link">Contact</a></li>
+    </ul>
+  </div>
+
+  <!-- HERO -->
+  <section class="pj-hero">
+    <div class="pj-hero-bg">
+      <div class="orb orb-1"></div>
+      <div class="orb orb-2"></div>
+      <div class="grid-overlay"></div>
+    </div>
+    <div class="container pj-hero-inner">
+      <a href="index.html#projects" class="pj-back reveal">← Back to Projects</a>
+      <div class="pj-hero-meta reveal">
+        <span class="pj-year">2023</span>
+        <span class="pj-category">Developer Tools · AI</span>
+        <span class="pj-status pj-status--live">Live</span>
+      </div>
+      <h1 class="pj-title reveal"><em>Synapse</em></h1>
+      <p class="pj-tagline reveal">AI-assisted code review platform integrated into GitHub Actions — surfacing bugs and design issues before they reach production.</p>
+      <div class="pj-hero-stats reveal">
+        <div class="pj-stat"><span class="pj-stat-n">2,400+</span><span class="pj-stat-l">PRs Reviewed</span></div>
+        <div class="pj-stat"><span class="pj-stat-n">38%</span><span class="pj-stat-l">Fewer Review Cycles</span></div>
+        <div class="pj-stat"><span class="pj-stat-n">&lt;45s</span><span class="pj-stat-l">Review Turnaround</span></div>
+        <div class="pj-stat"><span class="pj-stat-n">12</span><span class="pj-stat-l">Teams Using It</span></div>
+      </div>
+    </div>
+    <div class="pj-hero-img-wrap reveal">
+      <img src="https://images.unsplash.com/photo-1555774698-0b77e0d5fac6?w=1400&q=85" alt="Synapse code review" class="pj-hero-img" />
+    </div>
+  </section>
+
+  <!-- BODY -->
+  <main class="pj-main">
+    <div class="container pj-layout">
+
+      <aside class="pj-sidebar">
+        <div class="pj-sidebar-card reveal">
+          <h4>Tech Stack</h4>
+          <ul class="pj-tech-list">
+            <li><span class="pj-tech-dot"></span>TypeScript</li>
+            <li><span class="pj-tech-dot"></span>Next.js 14</li>
+            <li><span class="pj-tech-dot"></span>OpenAI API</li>
+            <li><span class="pj-tech-dot"></span>GitHub API</li>
+            <li><span class="pj-tech-dot"></span>Postgres</li>
+            <li><span class="pj-tech-dot"></span>Vercel</li>
+            <li><span class="pj-tech-dot"></span>GitHub Actions</li>
+          </ul>
+        </div>
+        <div class="pj-sidebar-card reveal">
+          <h4>My Role</h4>
+          <p>Full-stack engineer — GitHub App integration, LLM prompting pipeline, diff parser, Next.js dashboard, and Actions workflow design.</p>
+        </div>
+        <div class="pj-sidebar-card reveal">
+          <h4>Links</h4>
+          <a href="#" class="pj-ext-link">↗ GitHub Marketplace</a>
+          <a href="#" class="pj-ext-link">↗ Source Code</a>
+          <a href="#" class="pj-ext-link">↗ Docs</a>
+        </div>
+      </aside>
+
+      <article class="pj-content">
+
+        <section class="pj-section reveal">
+          <h2>Overview</h2>
+          <p>Synapse is a GitHub App and Actions integration that performs AI-assisted code review on every pull request. It parses the diff, understands the surrounding codebase context, and leaves structured review comments covering bugs, security issues, performance concerns, and style violations — in under 45 seconds.</p>
+          <p>It's designed to complement, not replace, human review: Synapse handles the mechanical first pass so engineers can focus their review time on architecture and intent.</p>
+        </section>
+
+        <section class="pj-section reveal">
+          <h2>The Problem</h2>
+          <div class="pj-callout pj-callout--problem">
+            <p>"We have a 48-hour average time-to-review. Junior engineers wait two days to find out they used the wrong error handling pattern. It's killing our velocity."</p>
+            <cite>— Engineering Manager, client team</cite>
+          </div>
+          <p>Code review bottlenecks are one of the most consistent friction points in engineering teams. Reviewers are busy, context-switching is expensive, and mechanical issues (null checks, missing tests, security anti-patterns) consume review time that should be spent on higher-level discussion.</p>
+        </section>
+
+        <section class="pj-section reveal">
+          <h2>Architecture</h2>
+          <p>Synapse runs as a GitHub App triggered by the <code>pull_request</code> webhook. A Next.js API route receives the event, fetches the diff and surrounding file context via the GitHub REST API, and passes a structured prompt to GPT-4o. The response is parsed into structured review comments and posted back via the GitHub Pull Request Review API.</p>
+          <div class="pj-arch-diagram">
+            <div class="pj-arch-row">
+              <div class="pj-arch-node pj-arch-node--source">GitHub PR<small>Webhook event</small></div>
+              <div class="pj-arch-arrow">→</div>
+              <div class="pj-arch-node pj-arch-node--stream">Next.js API<small>Vercel Edge</small></div>
+              <div class="pj-arch-arrow">→</div>
+              <div class="pj-arch-node pj-arch-node--process">Context Builder<small>Diff + file graph</small></div>
+            </div>
+            <div class="pj-arch-row pj-arch-row--2">
+              <div class="pj-arch-node pj-arch-node--store">Postgres<small>Audit · Config</small></div>
+              <div class="pj-arch-arrow pj-arch-arrow--up">↑</div>
+              <div class="pj-arch-node pj-arch-node--cache">GPT-4o<small>Structured output</small></div>
+              <div class="pj-arch-arrow">→</div>
+              <div class="pj-arch-node pj-arch-node--ui">PR Comments<small>GitHub Review API</small></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="pj-section reveal">
+          <h2>Key Engineering Decisions</h2>
+          <div class="pj-decisions">
+            <div class="pj-decision">
+              <span class="pj-decision-num">01</span>
+              <div>
+                <h4>Structured outputs over free-form text</h4>
+                <p>Using OpenAI's <code>response_format: json_schema</code>, every review is returned as a typed array of comment objects with <code>file</code>, <code>line</code>, <code>severity</code>, and <code>body</code> fields. Zero regex parsing, zero hallucinated line numbers.</p>
+              </div>
+            </div>
+            <div class="pj-decision">
+              <span class="pj-decision-num">02</span>
+              <div>
+                <h4>Context windowing for large PRs</h4>
+                <p>Large diffs exceed the context window. Synapse chunks the diff by file, processes each independently, then deduplicates and ranks comments by severity before posting. PRs with 50+ files are handled gracefully.</p>
+              </div>
+            </div>
+            <div class="pj-decision">
+              <span class="pj-decision-num">03</span>
+              <div>
+                <h4>Team-specific rule injection</h4>
+                <p>A <code>.synapse.yml</code> config file lets teams define custom rules in plain English ("Always check for SQL injection in database query functions"). These are injected into the system prompt, making reviews team-aware without fine-tuning.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="pj-section reveal">
+          <h2>Results</h2>
+          <div class="pj-results-grid">
+            <div class="pj-result-card">
+              <span class="pj-result-n">38%</span>
+              <span class="pj-result-l">Fewer review round-trips per PR</span>
+            </div>
+            <div class="pj-result-card">
+              <span class="pj-result-n">2,400+</span>
+              <span class="pj-result-l">Pull requests reviewed in production</span>
+            </div>
+            <div class="pj-result-card">
+              <span class="pj-result-n">4.6/5</span>
+              <span class="pj-result-l">Avg developer satisfaction score</span>
+            </div>
+            <div class="pj-result-card">
+              <span class="pj-result-n">~$0.04</span>
+              <span class="pj-result-l">Cost per PR review (GPT-4o)</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="pj-section reveal">
+          <h2>Lessons Learned</h2>
+          <p>False positives were the biggest adoption risk. Early versions flagged too many style issues that teams didn't care about, and engineers started ignoring all comments. I added a feedback thumbs-up/down on each comment that feeds into a per-team suppression model — after one week, false positive rate drops by ~60%.</p>
+          <p>The system prompt matters as much as the model. Spending two days on prompt engineering reduced hallucinated line numbers from 12% to under 1% — a bigger win than switching model versions.</p>
+        </section>
+
+      </article>
+    </div>
+
+    <div class="pj-nav-strip">
+      <div class="container pj-nav-inner">
+        <a href="project-vaultpay.html" class="pj-nav-all">← VaultPay</a>
+        <a href="project-orbit.html" class="pj-nav-next">
+          <span>Next Project</span>
+          <strong>Orbit OS →</strong>
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <span>© 2025 Alex Mercer</span>
+      <span>Designed & Built with ♥</span>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/project.js"></script>
+</body>
+</html>

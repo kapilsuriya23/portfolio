@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VaultPay — Alex Mercer</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/project.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-dot" id="cursorDot"></div>
+
+  <nav class="nav" id="nav">
+    <a href="index.html" class="nav-logo">AM<span class="dot">.</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="index.html#experience">Experience</a></li>
+      <li><a href="index.html#skills">Skills</a></li>
+      <li><a href="index.html#projects">Projects</a></li>
+      <li><a href="index.html#contact" class="nav-cta">Let's Talk</a></li>
+    </ul>
+    <button class="nav-toggle" id="navToggle" aria-label="Menu">
+      <span></span><span></span>
+    </button>
+  </nav>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <ul>
+      <li><a href="index.html#about"      class="mobile-link">About</a></li>
+      <li><a href="index.html#experience" class="mobile-link">Experience</a></li>
+      <li><a href="index.html#skills"     class="mobile-link">Skills</a></li>
+      <li><a href="index.html#projects"   class="mobile-link">Projects</a></li>
+      <li><a href="index.html#contact"    class="mobile-link">Contact</a></li>
+    </ul>
+  </div>
+
+  <!-- HERO -->
+  <section class="pj-hero">
+    <div class="pj-hero-bg">
+      <div class="orb orb-1"></div>
+      <div class="orb orb-2"></div>
+      <div class="grid-overlay"></div>
+    </div>
+    <div class="container pj-hero-inner">
+      <a href="index.html#projects" class="pj-back reveal">← Back to Projects</a>
+      <div class="pj-hero-meta reveal">
+        <span class="pj-year">2023</span>
+        <span class="pj-category">Fintech · SDK</span>
+        <span class="pj-status pj-status--live">Live</span>
+      </div>
+      <h1 class="pj-title reveal">Vault<em>Pay</em></h1>
+      <p class="pj-tagline reveal">PCI-DSS compliant payment SDK for fintech startups — supporting 15+ payment methods with a single integration.</p>
+      <div class="pj-hero-stats reveal">
+        <div class="pj-stat"><span class="pj-stat-n">15+</span><span class="pj-stat-l">Payment Methods</span></div>
+        <div class="pj-stat"><span class="pj-stat-n">PCI DSS</span><span class="pj-stat-l">Level 1 Compliant</span></div>
+        <div class="pj-stat"><span class="pj-stat-n">$2M+</span><span class="pj-stat-l">Monthly Volume</span></div>
+        <div class="pj-stat"><span class="pj-stat-n">8</span><span class="pj-stat-l">Client Integrations</span></div>
+      </div>
+    </div>
+    <div class="pj-hero-img-wrap reveal">
+      <img src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=1400&q=85" alt="VaultPay integration" class="pj-hero-img" />
+    </div>
+  </section>
+
+  <!-- BODY -->
+  <main class="pj-main">
+    <div class="container pj-layout">
+
+      <aside class="pj-sidebar">
+        <div class="pj-sidebar-card reveal">
+          <h4>Tech Stack</h4>
+          <ul class="pj-tech-list">
+            <li><span class="pj-tech-dot"></span>Python 3.12</li>
+            <li><span class="pj-tech-dot"></span>FastAPI</li>
+            <li><span class="pj-tech-dot"></span>Stripe API</li>
+            <li><span class="pj-tech-dot"></span>AWS Lambda</li>
+            <li><span class="pj-tech-dot"></span>DynamoDB</li>
+            <li><span class="pj-tech-dot"></span>AWS KMS</li>
+            <li><span class="pj-tech-dot"></span>Pytest</li>
+          </ul>
+        </div>
+        <div class="pj-sidebar-card reveal">
+          <h4>My Role</h4>
+          <p>Sole architect and engineer. Designed the SDK API surface, security model, webhook system, and developer documentation.</p>
+        </div>
+        <div class="pj-sidebar-card reveal">
+          <h4>Links</h4>
+          <a href="#" class="pj-ext-link">↗ Documentation</a>
+          <a href="#" class="pj-ext-link">↗ GitHub (SDK)</a>
+          <a href="#" class="pj-ext-link">↗ PyPI Package</a>
+        </div>
+      </aside>
+
+      <article class="pj-content">
+
+        <section class="pj-section reveal">
+          <h2>Overview</h2>
+          <p>VaultPay is a developer-first payment SDK that abstracts away the complexity of PCI-DSS compliance, multi-provider routing, and webhook handling behind a clean Python API. It was built after noticing that every fintech startup I worked with spent 3–6 months on payment infrastructure before writing their first line of product code.</p>
+          <p>With VaultPay, a developer can accept payments from 15+ methods — cards, ACH, SEPA, wallets — with fewer than 30 lines of code, fully compliant on day one.</p>
+        </section>
+
+        <section class="pj-section reveal">
+          <h2>The Problem</h2>
+          <div class="pj-callout pj-callout--problem">
+            <p>"We spent our entire first sprint just getting Stripe and PayPal talking to each other. We hadn't written a single feature for our actual users."</p>
+            <cite>— Founder, early-stage fintech client</cite>
+          </div>
+          <p>Payment infrastructure is notoriously repetitive: idempotency keys, webhook signature verification, retry logic, failed payment recovery, provider failover. Every startup reimplements these from scratch, often incorrectly.</p>
+        </section>
+
+        <section class="pj-section reveal">
+          <h2>Architecture</h2>
+          <p>VaultPay is structured as two layers: a thin SDK (pip-installable) that handles the developer-facing API, and a serverless gateway hosted on AWS that manages provider routing, tokenization, and compliance controls.</p>
+          <div class="pj-arch-diagram">
+            <div class="pj-arch-row">
+              <div class="pj-arch-node pj-arch-node--source">Client App<small>Python SDK</small></div>
+              <div class="pj-arch-arrow">→</div>
+              <div class="pj-arch-node pj-arch-node--stream">API Gateway<small>FastAPI · Lambda</small></div>
+              <div class="pj-arch-arrow">→</div>
+              <div class="pj-arch-node pj-arch-node--process">Router<small>Provider selection</small></div>
+            </div>
+            <div class="pj-arch-row pj-arch-row--2">
+              <div class="pj-arch-node pj-arch-node--store">DynamoDB<small>Idempotency · Audit</small></div>
+              <div class="pj-arch-arrow pj-arch-arrow--up">↑</div>
+              <div class="pj-arch-node pj-arch-node--cache">AWS KMS<small>Key encryption</small></div>
+              <div class="pj-arch-arrow">→</div>
+              <div class="pj-arch-node pj-arch-node--ui">Webhooks<small>Signed · Retried</small></div>
+            </div>
+          </div>
+          <p>Card data never touches the application server — it flows through a tokenization endpoint that stores only an encrypted reference, keeping the client's infrastructure entirely out of PCI scope.</p>
+        </section>
+
+        <section class="pj-section reveal">
+          <h2>Key Engineering Decisions</h2>
+          <div class="pj-decisions">
+            <div class="pj-decision">
+              <span class="pj-decision-num">01</span>
+              <div>
+                <h4>Idempotency by default</h4>
+                <p>Every mutating API call requires an idempotency key, stored in DynamoDB with a 24-hour TTL. Duplicate requests return the cached response without re-charging the customer — a bug that costs fintech startups thousands monthly.</p>
+              </div>
+            </div>
+            <div class="pj-decision">
+              <span class="pj-decision-num">02</span>
+              <div>
+                <h4>Provider-agnostic routing</h4>
+                <p>An internal routing layer selects the best provider per transaction based on currency, method, and client-defined cost rules. Failover is automatic — if Stripe returns a 5xx, the transaction retries via Adyen within 800ms.</p>
+              </div>
+            </div>
+            <div class="pj-decision">
+              <span class="pj-decision-num">03</span>
+              <div>
+                <h4>HMAC-signed webhooks with replay protection</h4>
+                <p>Every outgoing webhook is signed with the client's secret and includes a timestamp. The SDK's receiver validates both the signature and that the timestamp is within a 5-minute window, preventing replay attacks.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="pj-section reveal">
+          <h2>Results</h2>
+          <div class="pj-results-grid">
+            <div class="pj-result-card">
+              <span class="pj-result-n">3 hrs</span>
+              <span class="pj-result-l">Average integration time (vs. 3–6 months)</span>
+            </div>
+            <div class="pj-result-card">
+              <span class="pj-result-n">0</span>
+              <span class="pj-result-l">PCI audit findings across 8 clients</span>
+            </div>
+            <div class="pj-result-card">
+              <span class="pj-result-n">99.6%</span>
+              <span class="pj-result-l">Payment success rate after retry logic</span>
+            </div>
+            <div class="pj-result-card">
+              <span class="pj-result-n">$2M+</span>
+              <span class="pj-result-l">Monthly volume processed reliably</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="pj-section reveal">
+          <h2>Lessons Learned</h2>
+          <p>Testing payment flows is uniquely painful — Stripe's test mode is good but doesn't cover every edge case (e.g. bank-side declines, network timeouts mid-auth). I built a deterministic simulation layer that injects failure modes on demand during integration tests, which caught 6 bugs before production.</p>
+          <p>SDK versioning discipline matters more than I anticipated. After the first breaking change, I adopted a strict semantic versioning policy with a deprecation window, which saved several client relationships.</p>
+        </section>
+
+      </article>
+    </div>
+
+    <div class="pj-nav-strip">
+      <div class="container pj-nav-inner">
+        <a href="project-dataflow.html" class="pj-nav-all">← DataFlow Analytics</a>
+        <a href="project-synapse.html" class="pj-nav-next">
+          <span>Next Project</span>
+          <strong>Synapse →</strong>
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <span>© 2025 Alex Mercer</span>
+      <span>Designed & Built with ♥</span>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/project.js"></script>
+</body>
+</html>
