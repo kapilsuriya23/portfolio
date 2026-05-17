@@ -53,31 +53,27 @@ ul { list-style: none; }
 /* ============================================================
    CUSTOM CURSOR
    ============================================================ */
-.cursor {
-  position: fixed;
-  width: 36px; height: 36px;
-  border: 1.5px solid var(--c-accent);
-  border-radius: 50%;
-  pointer-events: none;
-  z-index: 9999;
-  transform: translate(-50%, -50%);
-  transition: transform 0.15s var(--ease), width 0.25s var(--ease), height 0.25s var(--ease), border-color 0.25s var(--ease), background 0.25s var(--ease);
-  will-change: transform;
+.cursor{
+    width:35px;
+    height:35px;
+    background:rgba(255,255,255,0.2);
+    backdrop-filter:blur(5px);
+    border-radius:50%;
+    position:fixed;
+    pointer-events:none;
+    transform:translate(-50%,-50%);
+    z-index:9999;
+    transition:all .12s ease;
 }
-.cursor-dot {
-  position: fixed;
-  width: 5px; height: 5px;
-  background: var(--c-accent);
-  border-radius: 50%;
-  pointer-events: none;
-  z-index: 9999;
-  transform: translate(-50%, -50%);
-  transition: transform 0.05s linear;
-}
-body.cursor-hover .cursor {
-  width: 60px; height: 60px;
-  background: rgba(193,126,74,0.08);
-  border-color: var(--c-accent);
+#trail{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    pointer-events:none;
+    z-index:9999;
+    
 }
 
 /* ============================================================
