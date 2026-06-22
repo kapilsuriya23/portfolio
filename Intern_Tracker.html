@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Job Application Tracker — kapilsuriya</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/project.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-dot" id="cursorDot"></div>
+  <canvas id="trail"></canvas>
+
+  <nav class="nav" id="nav">
+    <a href="index.html" class="nav-logo">AM<span class="dot">.</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="index.html#experience">Experience</a></li>
+      <li><a href="index.html#skills">Skills</a></li>
+      <li><a href="index.html#projects">Projects</a></li>
+      <li><a href="index.html#contact" class="nav-cta">Let's Talk</a></li>
+    </ul>
+    <button class="nav-toggle" id="navToggle" aria-label="Menu">
+      <span></span><span></span>
+    </button>
+  </nav>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <ul>
+      <li><a href="index.html#about"      class="mobile-link">About</a></li>
+      <li><a href="index.html#experience" class="mobile-link">Experience</a></li>
+      <li><a href="index.html#skills"     class="mobile-link">Skills</a></li>
+      <li><a href="index.html#projects"   class="mobile-link">Projects</a></li>
+      <li><a href="index.html#contact"    class="mobile-link">Contact</a></li>
+    </ul>
+  </div>
+
+  <!-- HERO -->
+  <section class="pj-hero">
+    <div class="pj-hero-bg">
+      <div class="orb orb-1"></div>
+      <div class="orb orb-2"></div>
+      <div class="grid-overlay"></div>
+    </div>
+    <div class="container pj-hero-inner">
+      <a href="index.html#projects" class="pj-back reveal">← Back to Projects</a>
+      <div class="pj-hero-meta reveal">
+        <span class="pj-year">2026</span>
+        <span class="pj-category">Full Stack · Productivity</span>
+        <span class="pj-status pj-status--live">Live</span>
+      </div>
+      <h1 class="pj-title reveal">Job Application Tracker</h1>
+      <p class="pj-tagline reveal">Full-stack job application tracker with JWT auth, Kanban drag-and-drop, analytics dashboard, and automated email reminders — deployed on Vercel &amp; Render.</p>
+      <div class="pj-hero-stats reveal">
+        <div class="pj-stat"><span class="pj-stat-n">6</span><span class="pj-stat-l">Pipeline Stages</span></div>
+        <div class="pj-stat"><span class="pj-stat-n">4</span><span class="pj-stat-l">Analytics Charts</span></div>
+        <div class="pj-stat"><span class="pj-stat-n">8AM</span><span class="pj-stat-l">Email Reminder Window</span></div>
+        <div class="pj-stat"><span class="pj-stat-n">100%</span><span class="pj-stat-l">Serverless Deploy</span></div>
+      </div>
+    </div>
+    <div class="pj-hero-img-wrap reveal">
+      <img src="assets/Intern tracker Ui.png" alt="Job Application Tracker dashboard" class="pj-hero-img" />
+    </div>
+  </section>
+
+  <!-- BODY -->
+  <main class="pj-main">
+    <div class="container pj-layout">
+
+      <!-- Sidebar -->
+      <aside class="pj-sidebar">
+        <div class="pj-sidebar-card reveal">
+          <h4>Tech Stack</h4>
+          <ul class="pj-tech-list">
+            <li><span class="pj-tech-dot"></span>React.js</li>
+            <li><span class="pj-tech-dot"></span>Node.js &amp; Express</li>
+            <li><span class="pj-tech-dot"></span>MongoDB Atlas</li>
+            <li><span class="pj-tech-dot"></span>JWT Auth</li>
+            <li><span class="pj-tech-dot"></span>Tailwind CSS</li>
+            <li><span class="pj-tech-dot"></span>Recharts</li>
+            <li><span class="pj-tech-dot"></span>node-cron</li>
+            <li><span class="pj-tech-dot"></span>Vite</li>
+          </ul>
+        </div>
+        <div class="pj-sidebar-card reveal">
+          <h4>My Role</h4>
+          <p>Sole full-stack engineer — system design, REST API, JWT auth flow, Kanban board, analytics, email automation, CORS configuration, and deployment pipeline.</p>
+        </div>
+        <div class="pj-sidebar-card reveal">
+          <h4>Links</h4>
+          <a href="https://internship-tracker-seven-pied.vercel.app/" class="pj-ext-link">↗ Live Website</a>
+          <a href="https://github.com/kapilsuriya23/internship-tracker.git" class="pj-ext-link">↗ GitHub Repo Link</a>
+        </div>
+      </aside>
+
+      <!-- Content -->
+      <article class="pj-content">
+
+        <section class="pj-section reveal">
+          <h2>Overview</h2>
+          <p>Job Application Tracker is a full-stack web application built to eliminate the chaos of tracking job applications across spreadsheets, browser tabs, and sticky notes. It centralises the entire job-hunt workflow — from first application to offer — into a single authenticated dashboard with a visual Kanban pipeline, rich analytics, and proactive email reminders.</p>
+          <p>The project was designed specifically with placement season in mind: fast to set up, zero vendor lock-in, and fully self-hostable. The frontend is deployed on Vercel and the Express API on Render, with MongoDB Atlas as the cloud database.</p>
+        </section>
+
+        <section class="pj-section reveal">
+          <h2>The Problem</h2>
+          <div class="pj-callout pj-callout--problem">
+            <p>"I missed two interview deadlines last semester because I forgot I had applied. I was tracking everything in a Google Sheet and it just didn't scale."</p>
+            <cite>— Feedback from a peer during ideation</cite>
+          </div>
+          <p>Students applying for jobs typically manage 20–50 applications simultaneously across different companies, timelines, and stages. A static spreadsheet has no status pipeline, no visual overview, and no ability to send proactive alerts — leading to missed deadlines and lost opportunities.</p>
+        </section>
+
+        <section class="pj-section reveal">
+          <h2>Architecture</h2>
+          <p>The application follows a standard SPA + REST API architecture, with the frontend and backend deployed independently to keep concerns separated and allow each layer to scale on its own.</p>
+          <div class="pj-arch-diagram">
+            <div class="pj-arch-row">
+              <div class="pj-arch-node pj-arch-node--source">React SPA<small>Vercel · Vite</small></div>
+              <div class="pj-arch-arrow">→</div>
+              <div class="pj-arch-node pj-arch-node--stream">Express API<small>Render · REST</small></div>
+              <div class="pj-arch-arrow">→</div>
+              <div class="pj-arch-node pj-arch-node--process">MongoDB Atlas<small>Cloud DB</small></div>
+            </div>
+            <div class="pj-arch-row pj-arch-row--2">
+              <div class="pj-arch-node pj-arch-node--store">JWT Auth<small>Access tokens</small></div>
+              <div class="pj-arch-arrow pj-arch-arrow--up">↑</div>
+              <div class="pj-arch-node pj-arch-node--cache">node-cron<small>Daily scheduler</small></div>
+              <div class="pj-arch-arrow">→</div>
+              <div class="pj-arch-node pj-arch-node--ui">Brevo SMTP<small>HTML email alerts</small></div>
+            </div>
+          </div>
+          <p>A <code>node-cron</code> job runs nightly on the Render server, queries MongoDB for applications with deadlines within 48 hours, and dispatches styled HTML reminder emails via Brevo SMTP — keeping users informed without any manual intervention.</p>
+        </section>
+
+        <section class="pj-section reveal">
+          <h2>Key Features</h2>
+
+          <!-- Kanban pipeline visual -->
+          <div class="it-pipeline">
+            <div class="it-stage it-stage--1"><span>Applied</span></div>
+            <div class="it-arrow">→</div>
+            <div class="it-stage it-stage--2"><span>Screening</span></div>
+            <div class="it-arrow">→</div>
+            <div class="it-stage it-stage--3"><span>Interview</span></div>
+            <div class="it-arrow">→</div>
+            <div class="it-stage it-stage--4"><span>Assessment</span></div>
+            <div class="it-arrow">→</div>
+            <div class="it-stage it-stage--5"><span>Offer</span></div>
+            <div class="it-arrow">→</div>
+            <div class="it-stage it-stage--6"><span>Rejected</span></div>
+          </div>
+
+          <div class="pj-decisions">
+            <div class="pj-decision">
+              <span class="pj-decision-num">01</span>
+              <div>
+                <h4>Kanban Drag-and-Drop Board</h4>
+                <p>Built with <code>@dnd-kit</code>, the Kanban board lets users drag application cards across all 6 pipeline stages. The drag overlay is rendered via a React Portal to avoid z-index stacking context issues across Kanban columns — a non-trivial fix that required understanding how the DOM paint order works with <code>position: fixed</code>.</p>
+              </div>
+            </div>
+            <div class="pj-decision">
+              <span class="pj-decision-num">02</span>
+              <div>
+                <h4>Analytics Dashboard with Recharts</h4>
+                <p>Four interactive charts built with Recharts: application trends over time (LineChart), status distribution (PieChart), pipeline funnel (BarChart), and success rate metrics. All charts are responsive and update in real time as application data changes.</p>
+              </div>
+            </div>
+            <div class="pj-decision">
+              <span class="pj-decision-num">03</span>
+              <div>
+                <h4>Automated Email Reminders</h4>
+                <p>A <code>node-cron</code> job scheduled at midnight queries for upcoming deadlines and fires styled HTML emails through Brevo SMTP. Gmail App Passwords were unavailable on the institutional account, making Brevo the pragmatic SMTP choice — it also provides better deliverability and a generous free tier.</p>
+              </div>
+            </div>
+            <div class="pj-decision">
+              <span class="pj-decision-num">04</span>
+              <div>
+                <h4>JWT Authentication &amp; Security</h4>
+                <p>Stateless JWT-based auth with bcrypt password hashing, rate limiting on auth endpoints, and CORS configured to allowlist both the Vercel production domain and Vercel preview URLs — a configuration subtlety that tripped up early deployments and required dynamic origin validation.</p>
+              </div>
+            </div>
+            <div class="pj-decision">
+              <span class="pj-decision-num">05</span>
+              <div>
+                <h4>Vite Bundle Optimisation</h4>
+                <p>Manual chunk splitting in <code>vite.config.js</code> separates <code>recharts</code>, <code>dnd-kit</code>, and <code>react-vendor</code> into independent chunks. This improves initial load performance by allowing the browser to cache heavy dependencies independently from application code that changes frequently.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="pj-section reveal">
+          <h2>Technical Challenges</h2>
+          <div class="pj-callout pj-callout--problem">
+            <p>The three hardest problems were CORS on Vercel preview deployments, the drag overlay z-index bug, and Brevo SMTP setup — all solved in production.</p>
+            <cite>— Engineering notes</cite>
+          </div>
+          <p><strong>CORS on Vercel previews:</strong> Each Vercel preview URL is unique (<code>interntrack-git-feat-xxx.vercel.app</code>). A static allowlist breaks every PR preview. The fix was a dynamic origin validator on the Express server that uses a regex to match the Vercel preview URL pattern alongside the production domain.</p>
+          <p><strong>Drag overlay with @dnd-kit:</strong> Rendering the drag ghost inside a Kanban column caused it to be clipped by <code>overflow: hidden</code> on the column container. Moving the <code>DragOverlay</code> to a React Portal at the document body level resolved the clipping without any CSS hacks.</p>
+          <p><strong>Brevo SMTP:</strong> Institutional Google accounts block App Passwords, making Nodemailer + Gmail the standard go-to infeasible. Brevo's SMTP relay works with any Nodemailer transport config and adds open/click tracking as a bonus.</p>
+        </section>
+
+        <section class="pj-section reveal">
+          <h2>Results</h2>
+          <div class="pj-results-grid">
+            <div class="pj-result-card">
+              <span class="pj-result-n">6</span>
+              <span class="pj-result-l">Pipeline stages with drag-and-drop reordering</span>
+            </div>
+            <div class="pj-result-card">
+              <span class="pj-result-n">4</span>
+              <span class="pj-result-l">Real-time analytics charts in the dashboard</span>
+            </div>
+            <div class="pj-result-card">
+              <span class="pj-result-n">0ms</span>
+              <span class="pj-result-l">Cold start penalty — serverless edge deploy</span>
+            </div>
+            <div class="pj-result-card">
+              <span class="pj-result-n">3</span>
+              <span class="pj-result-l">Vite manual chunks for optimal caching</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="pj-section reveal">
+          <h2>Lessons Learned</h2>
+          <p>Deployment environment differences are not edge cases — they're the rule. CORS, environment variables, and preview URL patterns all behave differently in production than in local development. Building the CORS validator to handle dynamic origins from day one would have saved two debugging sessions.</p>
+          <p>The Vite chunk splitting exercise was valuable beyond performance: understanding which libraries change rarely (Recharts, dnd-kit) vs. frequently (app code) is a transferable mental model for any bundler or CDN caching strategy.</p>
+          <p>For a future version, I'd add WebSocket-based real-time updates so collaborators (e.g. a placement cell coordinator) can see application status changes live without a page refresh.</p>
+        </section>
+
+      </article>
+    </div>
+
+    <div class="pj-nav-strip">
+      <div class="container pj-nav-inner">
+        <a href="index.html" class="pj-nav-all">← Back to home</a>
+        
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <span>© 2026 Kapilsuriya</span>
+      <span>Designed & Built with ♥</span>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/project.js"></script>
+</body>
+</html>

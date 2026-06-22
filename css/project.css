@@ -440,3 +440,39 @@
   .pj-arch-node { min-width: 80px; padding: 10px 12px; font-size: 0.75rem; }
   .pj-nav-inner { flex-direction: column; gap: 20px; align-items: flex-start; }
 }
+
+/* ── InternTrack — Kanban pipeline visual ─────────────────── */
+.it-pipeline {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin: 24px 0 32px;
+  padding: 24px;
+  background: var(--c-bg);
+  border: 1px solid var(--c-border);
+  border-radius: var(--radius);
+}
+.it-stage {
+  flex: 1;
+  min-width: 80px;
+  text-align: center;
+  padding: 10px 8px;
+  border-radius: var(--radius-sm);
+  font-size: 0.72rem;
+  font-weight: 600;
+  font-family: var(--f-mono);
+  letter-spacing: 0.04em;
+  border: 1px solid transparent;
+}
+.it-stage--1 { background: #EEF4FF; color: #3B6FD4; border-color: #C4D8F8; }
+.it-stage--2 { background: #FFF8ED; color: #B07320; border-color: #F5DBA8; }
+.it-stage--3 { background: #F0F8FF; color: #2878C0; border-color: #B8D9F5; }
+.it-stage--4 { background: #F5F0FF; color: #6B48C8; border-color: #D4C4F0; }
+.it-stage--5 { background: #EDFAF2; color: #2D7A4F; border-color: #B5E8CB; }
+.it-stage--6 { background: #FFF0F0; color: #C04040; border-color: #F5C4C4; }
+.it-arrow {
+  color: var(--c-ink-3);
+  font-size: 0.8rem;
+  flex-shrink: 0;
+}
