@@ -1,0 +1,402 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Browser Extension for Coding — Kapilsuriya</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/project.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="cursor" id="cursor"></div>
+    <div class="cursor-dot" id="cursorDot"></div>
+    <canvas id="trail"></canvas>
+
+    <nav class="nav" id="nav">
+      <a href="index.html" class="nav-logo">Kapilsuriya<span class="dot">.</span></a>
+      <ul class="nav-links">
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#experience">Experience</a></li>
+        <li><a href="index.html#skills">Skills</a></li>
+        <li><a href="index.html#projects">Projects</a></li>
+        <li><a href="index.html#contact" class="nav-cta">Let's Talk</a></li>
+      </ul>
+      <button class="nav-toggle" id="navToggle" aria-label="Menu">
+        <span></span><span></span>
+      </button>
+    </nav>
+
+    <div class="mobile-menu" id="mobileMenu">
+      <ul>
+        <li><a href="index.html#about" class="mobile-link">About</a></li>
+        <li>
+          <a href="index.html#experience" class="mobile-link">Experience</a>
+        </li>
+        <li><a href="index.html#skills" class="mobile-link">Skills</a></li>
+        <li><a href="index.html#projects" class="mobile-link">Projects</a></li>
+        <li><a href="index.html#contact" class="mobile-link">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- HERO -->
+    <section class="pj-hero">
+      <div class="pj-hero-bg">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="grid-overlay"></div>
+      </div>
+      <div class="container pj-hero-inner">
+        <a href="index.html#projects" class="pj-back reveal"
+          >← Back to Projects</a
+        >
+        <div class="pj-hero-meta reveal">
+          <span class="pj-year">2026</span>
+          <span class="pj-category">Browser Extension · AI</span>
+          <span class="pj-status pj-status--live">Live</span>
+        </div>
+        <h1 class="pj-title reveal">Browser Extension for <em>Coding</em></h1>
+        <p class="pj-tagline reveal">
+          AI-powered Chrome/Edge extension that breaks the "struggle → editorial
+          → copy" cycle by revealing DSA problem guidance progressively —
+          explanation first, solution last and locked.
+        </p>
+        <div class="pj-hero-stats reveal">
+          <div class="pj-stat">
+            <span class="pj-stat-n">4</span
+            ><span class="pj-stat-l">Platforms Supported</span>
+          </div>
+          <div class="pj-stat">
+            <span class="pj-stat-n">5</span
+            ><span class="pj-stat-l">Progressive Reveal Steps</span>
+          </div>
+          <div class="pj-stat">
+            <span class="pj-stat-n">3</span
+            ><span class="pj-stat-l">Solution Languages</span>
+          </div>
+          <div class="pj-stat">
+            <span class="pj-stat-n">MV3</span
+            ><span class="pj-stat-l">Chrome Manifest Version</span>
+          </div>
+        </div>
+      </div>
+      <div class="pj-hero-img-wrap reveal">
+        <img
+          src="assets/Algolens Ui.png"
+          alt="AlgoLens extension"
+          class="pj-hero-img"
+        />
+      </div>
+    </section>
+
+    <!-- BODY -->
+    <main class="pj-main">
+      
+      <div class="container pj-layout">
+        <!-- Sidebar -->
+        <aside class="pj-sidebar">
+          <div class="pj-sidebar-card reveal">
+            <h4>Tech Stack</h4>
+            <ul class="pj-tech-list">
+              <li><span class="pj-tech-dot"></span>React + TypeScript</li>
+              <li><span class="pj-tech-dot"></span>Tailwind CSS</li>
+              <li><span class="pj-tech-dot"></span>Chrome Manifest V3</li>
+              <li><span class="pj-tech-dot"></span>Node.js + Express</li>
+              <li><span class="pj-tech-dot"></span>OpenRouter AI</li>
+              <li><span class="pj-tech-dot"></span>NVIDIA Nemotron API</li>
+            </ul>
+          </div>
+          <div class="pj-sidebar-card reveal">
+            <h4>My Role</h4>
+            <p>
+              Sole engineer — extension architecture (content script, background
+              service worker, popup), backend API, AI prompt design,
+              multi-platform DOM extraction, and UI.
+            </p>
+          </div>
+          <div class="pj-sidebar-card reveal">
+            <h4>Links</h4>
+            <a href="https://github.com/kapilsuriya23/algolens.git" class="pj-ext-link">↗ GitHub Repository</a>
+          </div>
+        </aside>
+
+        <!-- Content -->
+        <article class="pj-content">
+          <section class="pj-section reveal">
+            <h2>Overview</h2>
+            <p>
+              AlgoLens is a browser extension built for students who get stuck
+              on DSA problems and reach for the solution too quickly. Instead of
+              dumping the answer, it walks the student through five progressive
+              steps — plain-English explanation, algorithmic pattern,
+              step-by-step approach, ordered hints, and finally a solution that
+              is locked behind an explicit user action.
+            </p>
+            <p>
+              The extension auto-detects the problem you're viewing, extracts
+              its content via platform-specific strategies, calls an Express
+              backend that queries OpenRouter AI, and renders a structured
+              analysis in a popup — all without leaving the problem page.
+              Supported platforms: LeetCode, GeeksForGeeks, HackerRank, and
+              Codeforces.
+            </p>
+          </section>
+
+          <section class="pj-section reveal">
+            <h2>The Problem</h2>
+            <div class="pj-callout pj-callout--problem">
+              <p>
+                "I open the editorial after 5 minutes, read the solution, feel
+                like I understood it — and then fail the exact same problem type
+                next week."
+              </p>
+              <cite>— The cycle AlgoLens is designed to break</cite>
+            </div>
+            <p>
+              The standard student workflow on LeetCode is all-or-nothing:
+              struggle briefly, open the full editorial, passively read the
+              answer. This produces the illusion of understanding without the
+              retention that comes from productive struggle. AlgoLens replaces
+              the editorial with a graduated reveal that requires active
+              engagement at each step before unlocking the next.
+            </p>
+          </section>
+
+          <section class="pj-section reveal">
+            <h2>Architecture</h2>
+            <p>
+              A Chrome extension runs in three isolated JavaScript environments
+              that cannot share memory — they communicate exclusively through
+              Chrome's messaging APIs. Understanding this constraint shaped
+              every architectural decision.
+            </p>
+            <div class="pj-arch-diagram">
+              <div class="pj-arch-row">
+                <div class="pj-arch-node pj-arch-node--source">
+                  Content Script<small>DOM / GraphQL extraction</small>
+                </div>
+                <div class="pj-arch-arrow">→</div>
+                <div class="pj-arch-node pj-arch-node--stream">
+                  Service Worker<small>Message router · HTTP</small>
+                </div>
+                <div class="pj-arch-arrow">→</div>
+                <div class="pj-arch-node pj-arch-node--process">
+                  Popup UI<small>React · Tabs · Reveal</small>
+                </div>
+              </div>
+              <div class="pj-arch-row pj-arch-row--2">
+                <div class="pj-arch-node pj-arch-node--store">
+                  Express Backend<small>API key isolation</small>
+                </div>
+                <div class="pj-arch-arrow pj-arch-arrow--up">↑</div>
+                <div class="pj-arch-node pj-arch-node--cache">
+                  OpenRouter AI<small>NVIDIA Nemotron</small>
+                </div>
+                <div class="pj-arch-arrow">→</div>
+                <div class="pj-arch-node pj-arch-node--ui">
+                  JSON Response<small>Typed schema</small>
+                </div>
+              </div>
+            </div>
+            <p>
+              The backend exists primarily as a security boundary — the
+              OpenRouter API key lives only in <code>.env</code> on the server
+              and is never bundled into the extension. Even a full unpack of the
+              extension source reveals no credentials.
+            </p>
+          </section>
+
+          <section class="pj-section reveal">
+            <h2>Progressive Reveal Flow</h2>
+
+            <!-- Reveal steps visual -->
+            <div class="al-reveal-flow">
+              <div class="al-step">
+                <div class="al-step-icon">①</div>
+                <div class="al-step-label">Explain</div>
+                <div class="al-step-sub">Plain English + Pattern</div>
+              </div>
+              <div class="al-connector"></div>
+              <div class="al-step">
+                <div class="al-step-icon">②</div>
+                <div class="al-step-label">Approach</div>
+                <div class="al-step-sub">Step-by-step logic</div>
+              </div>
+              <div class="al-connector"></div>
+              <div class="al-step">
+                <div class="al-step-icon">③</div>
+                <div class="al-step-label">Complexity</div>
+                <div class="al-step-sub">Time &amp; space chips</div>
+              </div>
+              <div class="al-connector"></div>
+              <div class="al-step">
+                <div class="al-step-icon">④</div>
+                <div class="al-step-label">Hints</div>
+                <div class="al-step-sub">3 ordered nudges</div>
+              </div>
+              <div class="al-connector"></div>
+              <div class="al-step al-step--locked">
+                <div class="al-step-icon">🔒</div>
+                <div class="al-step-label">Solution</div>
+                <div class="al-step-sub">Locked by default</div>
+              </div>
+            </div>
+
+            <p>
+              The solution tab is the core design decision that separates
+              AlgoLens from a cheating tool. It starts locked with the message
+              <em>"Try it yourself first"</em> and requires an explicit "Show
+              Solution" click to reveal code — a deliberate friction point that
+              preserves the productive struggle.
+            </p>
+          </section>
+
+          <section class="pj-section reveal">
+            <h2>Key Engineering Decisions</h2>
+            <div class="pj-decisions">
+              <div class="pj-decision">
+                <span class="pj-decision-num">01</span>
+                <div>
+                  <h4>GraphQL API over DOM scraping for LeetCode</h4>
+                  <p>
+                    LeetCode's class names change frequently with frontend
+                    deployments, making CSS selectors brittle. By calling their
+                    public GraphQL endpoint with the problem slug extracted from
+                    the URL, title and description extraction is completely
+                    immune to DOM changes — the most reliable extraction
+                    strategy across all four platforms.
+                  </p>
+                </div>
+              </div>
+              <div class="pj-decision">
+                <span class="pj-decision-num">02</span>
+                <div>
+                  <h4>Manifest V3 service worker constraints</h4>
+                  <p>
+                    MV3 replaces persistent background pages with event-driven
+                    service workers that terminate when idle. All async message
+                    handlers required explicit <code>return true</code> to keep
+                    the Chrome message channel open, and incoming messages
+                    needed to handle the case where the service worker had been
+                    terminated and required re-awakening.
+                  </p>
+                </div>
+              </div>
+              <div class="pj-decision">
+                <span class="pj-decision-num">03</span>
+                <div>
+                  <h4>Structured JSON prompt as a typed API contract</h4>
+                  <p>
+                    The AI prompt specifies the exact output schema field by
+                    field, instructs the model to return only raw JSON with no
+                    markdown wrapping, and sets temperature to 0.2 for
+                    consistency. This turns the LLM call into something closer
+                    to a typed API — the backend <code>JSON.parse()</code>s
+                    directly and validates field presence before forwarding.
+                    Defensive stripping of markdown code fences handles the edge
+                    cases where the model wraps output in triple backticks
+                    despite instructions.
+                  </p>
+                </div>
+              </div>
+              <div class="pj-decision">
+                <span class="pj-decision-num">04</span>
+                <div>
+                  <h4>Retry + caching in the content script</h4>
+                  <p>
+                    LeetCode, GFG, and HackerRank all render content via React,
+                    so the DOM isn't ready when the content script first runs.
+                    Extraction retries up to 12 times at 700ms intervals. The
+                    result is cached in the content script's module scope, so
+                    subsequent popup opens don't re-trigger scraping. A
+                    <code>MutationObserver</code> handles SPA navigation when
+                    users switch problems without a full page reload.
+                  </p>
+                </div>
+              </div>
+              <div class="pj-decision">
+                <span class="pj-decision-num">05</span>
+                <div>
+                  <h4>Cross-platform DOM extraction strategy</h4>
+                  <p>
+                    Four platforms, zero shared HTML structure, and GFG has two
+                    distinct page layouts. Solved with a priority-ordered
+                    selector list, <code>&lt;title&gt;</code> tag fallback, and
+                    a heuristic largest-text-block scan as a last resort — with
+                    garbage detection to filter out navigation and banner text
+                    that DOM scanners otherwise pick up first.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="pj-section reveal">
+            <h2>Challenges &amp; Fixes</h2>
+            <div class="pj-decisions">
+              <div class="pj-decision">
+                <span class="pj-decision-num">⚡</span>
+                <div>
+                  <h4>ESM compatibility in Vite config</h4>
+                  <p>
+                    Vite configs run as ESM when
+                    <code>"type": "module"</code> is set in
+                    <code>package.json</code>, which means
+                    <code>__dirname</code> doesn't exist. Fixed by
+                    reconstructing it with
+                    <code>fileURLToPath(import.meta.url)</code> and
+                    <code>dirname()</code> — a subtle Node.js ESM gotcha that
+                    breaks the build silently if missed.
+                  </p>
+                </div>
+              </div>
+              <div class="pj-decision">
+                <span class="pj-decision-num">⚡</span>
+                <div>
+                  <h4>LLM output consistency</h4>
+                  <p>
+                    Models occasionally wrap JSON in markdown fences, include
+                    trailing commas, or truncate long outputs. Added defensive
+                    cleaning (strip fences before parsing, set
+                    <code>max_tokens: 3000</code>) to make parsing reliable
+                    regardless of which model OpenRouter routes to.
+                  </p>
+                </div>
+              </div>
+              <div class="pj-decision">
+                <span class="pj-decision-num">⚡</span>
+                <div>
+                  <h4>MV3 "message channel closed" errors</h4>
+                  <p>
+                    Forgetting <code>return true</code> on an async message
+                    listener causes Chrome to close the
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- PROJECT NAV -->
+      <div class="pj-nav-strip">
+        <div class="container pj-nav-inner">
+          <a href="index.html#projects" class="pj-nav-all"> ← All Projects </a>
+        </div>
+      </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="container">
+        <span>© 2026 Kapilsuriya</span>
+      </div>
+    </footer>
+        </article>
+      </div>
+    </main>
+  </body>
+</html>

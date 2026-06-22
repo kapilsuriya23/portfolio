@@ -476,3 +476,62 @@
   font-size: 0.8rem;
   flex-shrink: 0;
 }
+
+
+/* ── AlgoLens — Progressive reveal flow visual ────────────── */
+.al-reveal-flow {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  margin: 24px 0 32px;
+  padding: 28px 24px;
+  background: var(--c-bg);
+  border: 1px solid var(--c-border);
+  border-radius: var(--radius);
+  flex-wrap: wrap;
+  row-gap: 16px;
+}
+.al-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  flex: 1;
+  min-width: 80px;
+  gap: 6px;
+}
+.al-step-icon {
+  width: 40px; height: 40px;
+  border-radius: 50%;
+  background: var(--c-accent-2);
+  color: var(--c-accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  font-weight: 700;
+  border: 1.5px solid #DFC4A0;
+}
+.al-step--locked .al-step-icon {
+  background: #F0F0F0;
+  color: #888;
+  border-color: #D8D8D8;
+}
+.al-step-label {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--c-ink);
+  font-family: var(--f-mono);
+}
+.al-step-sub {
+  font-size: 0.68rem;
+  color: var(--c-ink-3);
+  line-height: 1.3;
+}
+.al-connector {
+  width: 24px;
+  height: 1.5px;
+  background: var(--c-border);
+  flex-shrink: 0;
+  margin-bottom: 28px;
+}
