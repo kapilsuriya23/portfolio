@@ -5,44 +5,48 @@
 "use strict";
 
 /* ── Custom Cursor ──────────────────────────────────────────── */
-const canvas = document.getElementById("trail");
-const ctx = canvas.getContext("2d");
+(function initCursor() {
+  const cursor    = document.getElementById('cursor');
+  const cursorDot = document.getElementById('cursorDot');
+  if (!cursor || !cursorDot) return;
 
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
+  let mx = 0, my = 0;
+  let cx = 0, cy = 0;
 
-let particles = [];
-
-document.addEventListener("mousemove", (e) => {
-  particles.push({
-    x: e.clientX,
-    y: e.clientY,
-    size: 8,
-  });
-});
-
-function animate() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-  particles.forEach((p, index) => {
-    ctx.beginPath();
-    ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
-    ctx.fill();
-    ctx.fillStyle = "#c88245";
-    ctx.shadowBlur = 20;
-    ctx.shadowColor = "#c88245";
-
-    p.size -= 0.2;
-
-    if (p.size <= 0) {
-      particles.splice(index, 1);
-    }
+  document.addEventListener('mousemove', e => {
+    mx = e.clientX;
+    my = e.clientY;
+    /* dot follows instantly */
+    cursorDot.style.left = mx + 'px';
+    cursorDot.style.top  = my + 'px';
   });
 
-  requestAnimationFrame(animate);
-}
+  /* outer ring lags smoothly */
+  function animate() {
+    cx += (mx - cx) * 0.12;
+    cy += (my - cy) * 0.12;
+    cursor.style.left = cx + 'px';
+    cursor.style.top  = cy + 'px';
+    requestAnimationFrame(animate);
+  }
+  animate();
 
-animate();
+  /* hover scale */
+  document.querySelectorAll('a, button, .project-card, .skill-card, .testimonial-card').forEach(el => {
+    el.addEventListener('mouseenter', () => document.body.classList.add('cursor-hover'));
+    el.addEventListener('mouseleave', () => document.body.classList.remove('cursor-hover'));
+  });
+
+  /* hide on leave */
+  document.addEventListener('mouseleave', () => {
+    cursor.style.opacity    = '0';
+    cursorDot.style.opacity = '0';
+  });
+  document.addEventListener('mouseenter', () => {
+    cursor.style.opacity    = '1';
+    cursorDot.style.opacity = '1';
+  });
+})();
 
 /* ── Scroll-triggered Nav ───────────────────────────────────── */
 (function initNav() {
