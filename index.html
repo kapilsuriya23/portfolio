@@ -24,6 +24,7 @@
         <li><a href="#experience">Experience</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#projects">Projects</a></li>
+        <li><a href="#achievements">Achievements</a></li>
         <li><a href="#contact" class="nav-cta">Let's Talk</a></li>
       </ul>
       <button class="nav-toggle" id="navToggle" aria-label="Menu">
@@ -38,7 +39,7 @@
         <li><a href="#experience" class="mobile-link">Experience</a></li>
         <li><a href="#skills" class="mobile-link">Skills</a></li>
         <li><a href="#projects" class="mobile-link">Projects</a></li>
-        <li><a href="#testimonials" class="mobile-link">Testimonials</a></li>
+        <li><a href="#achievements" class="mobile-link">Achievements</a></li>
         <li><a href="#contact" class="mobile-link">Contact</a></li>
       </ul>
     </div>
@@ -375,49 +376,119 @@
       </div>
     </section>
 
-    <!-- ░░ TESTIMONIALS ░░
-  <section class="testimonials section" id="testimonials">
-    <div class="container">
-      <p class="section-label reveal">Kind Words</p>
-      <h2 class="section-title reveal">Testimonials</h2>
-      <div class="testimonials-grid">
+    <!-- ░░ ACHIEVEMENTS ░░ -->
+<section class="achievements section" id="achievements">
+  <div class="container">
+    <p class="section-label reveal">Recognition</p>
+    <h2 class="section-title reveal">Achievements</h2>
 
-        <div class="testimonial-card reveal">
-          <p class="testimonial-quote">"Alex rebuilt our payment infrastructure from the ground up. The result was a 40% reduction in failed transactions and a system that scaled effortlessly through our Series B growth."</p>
-          <div class="testimonial-author">
-            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=80&q=80" alt="Sarah Chen" />
-            <div>
-              <strong>Sarah Chen</strong>
-              <span>CTO, FinBridge</span>
-            </div>
-          </div>
-        </div>
+    <div class="ach-grid">
 
-        <div class="testimonial-card reveal">
-          <p class="testimonial-quote">"One of the most thoughtful engineers I've worked with. Alex has a rare ability to communicate complex technical tradeoffs to non-technical stakeholders without losing precision."</p>
-          <div class="testimonial-author">
-            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=80&q=80" alt="Marcus Webb" />
-            <div>
-              <strong>Marcus Webb</strong>
-              <span>VP Engineering, Airbnb</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="testimonial-card reveal">
-          <p class="testimonial-quote">"Alex delivered a production-ready analytics pipeline in 6 weeks that our team estimated would take a quarter. The code quality and documentation were exceptional."</p>
-          <div class="testimonial-author">
-            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=80&q=80" alt="Priya Nair" />
-            <div>
-              <strong>Priya Nair</strong>
-              <span>Head of Data, Loom</span>
-            </div>
-          </div>
-        </div>
-
-      </div>
+      <!-- TCS NQT -->
+<div class="ach-card ach-card--featured reveal">
+  <div class="ach-icon-wrap">
+    <span class="ach-icon">⬡</span>
+  </div>
+  <div class="ach-body">
+    <span class="ach-tag">Certification</span>
+    <h3 class="ach-title">TCS NQT — IT Score</h3>
+    <p class="ach-desc">Qualified the TCS National Qualifier Test scoring <strong style="color:var(--c-accent-2)">72%</strong> in the IT section — demonstrating proficiency in programming fundamentals, data structures, and aptitude across one of India's most competitive placement assessments.</p>
+    <div class="ach-meta">
+      <span class="ach-badge">72% · IT Section</span>
+      <span class="ach-year">July-2026</span>
+      <button class="ach-scorecard-btn" id="scorecardBtn">View Scorecard ↗</button>
     </div>
-  </section> -->
+  </div>
+</div>
+
+<!-- Scorecard Modal -->
+<div class="scorecard-backdrop" id="scorecardBackdrop">
+  <div class="scorecard-modal">
+    <div class="scorecard-header">
+      <span>TCS NQT Scorecard</span>
+      <button class="scorecard-close" id="scorecardClose">✕</button>
+    </div>
+    <div class="scorecard-body">
+      <iframe src="assets/tcs-scorecard.pdf" class="scorecard-img" style="height:500px;border:none;"></iframe>
+    </div>
+    <div class="scorecard-footer">
+      <a href="assets/tcs-scorecard.pdf" download class="scorecard-download">↓ Download</a>
+    </div>
+  </div>
+</div>
+
+      <!-- LeetCode -->
+      <div class="ach-card reveal">
+        <div class="ach-icon-wrap">
+          <span class="ach-icon">◈</span>
+        </div>
+        <div class="ach-body">
+          <span class="ach-tag">Problem Solving</span>
+          <h3 class="ach-title">400+ Problems Solved</h3>
+          <p class="ach-desc">Solved 400+ problems across LeetCode and GeeksForGeeks spanning arrays, trees, graphs, dynamic programming, and sliding window — with consistent focus on optimal time and space complexity.</p>
+          <div class="ach-stat-row">
+            <div class="ach-stat">
+              <span class="ach-stat-n">200+</span>
+              <span class="ach-stat-l">LeetCode</span>
+            </div>
+            <div class="ach-divider"></div>
+            <div class="ach-stat">
+              <span class="ach-stat-n">200+</span>
+              <span class="ach-stat-l">GeeksForGeeks</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SkillRack -->
+      <div class="ach-card reveal">
+        <div class="ach-icon-wrap">
+          <span class="ach-icon">◎</span>
+        </div>
+        <div class="ach-body">
+          <span class="ach-tag">Competitive Coding</span>
+          <h3 class="ach-title">500+ Problems on SkillRack</h3>
+          <p class="ach-desc">Solved 500+ problems on SkillRack covering C, Java, and Python — consistently ranking among top performers in college-level coding tests and daily challenges.</p>
+          <div class="ach-stat-row">
+            <div class="ach-stat">
+              <span class="ach-stat-n">500+</span>
+              <span class="ach-stat-l">Problems</span>
+            </div>
+            <div class="ach-divider"></div>
+            <div class="ach-stat">
+              <span class="ach-stat-n">Top</span>
+              <span class="ach-stat-l">Performer</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- DSA streak / consistency card -->
+      <div class="ach-card ach-card--accent reveal">
+        <div class="ach-icon-wrap">
+          <span class="ach-icon">◇</span>
+        </div>
+        <div class="ach-body">
+          <span class="ach-tag">Consistency</span>
+          <h3 class="ach-title">900+ DSA Problems Total</h3>
+          <p class="ach-desc">Across LeetCode, GeeksForGeeks, and SkillRack — a consistent problem-solving habit built over placement preparation, covering every major DSA topic tested in product-based company interviews.</p>
+          <div class="ach-stat-row">
+            <div class="ach-stat">
+              <span class="ach-stat-n">900+</span>
+              <span class="ach-stat-l">Total Solved</span>
+            </div>
+            <div class="ach-divider"></div>
+            <div class="ach-stat">
+              <span class="ach-stat-n">3</span>
+              <span class="ach-stat-l">Platforms</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
 
     <!-- ░░ CONTACT ░░ -->
     <section class="contact section" id="contact">

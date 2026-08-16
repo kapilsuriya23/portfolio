@@ -195,3 +195,21 @@
 
   stats.forEach((s) => observer.observe(s));
 })();
+
+
+/* ── Scorecard Modal ────────────────────────────────────────── */
+(function initScorecard() {
+  const btn      = document.getElementById('scorecardBtn');
+  const backdrop = document.getElementById('scorecardBackdrop');
+  const close    = document.getElementById('scorecardClose');
+  if (!btn || !backdrop) return;
+
+  btn.addEventListener('click', () => backdrop.classList.add('open'));
+  close.addEventListener('click', () => backdrop.classList.remove('open'));
+  backdrop.addEventListener('click', e => {
+    if (e.target === backdrop) backdrop.classList.remove('open');
+  });
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') backdrop.classList.remove('open');
+  });
+})();
